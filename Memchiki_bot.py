@@ -6,7 +6,7 @@ from keep_alive import keep_alive
 keep_alive()
 
 bot = telebot.TeleBot(os.environ.get("BOT_TOKEN"))
-
+bot.remove_webhook()
 
 @bot.message_handler(commands=['start'])
 def start(message):
